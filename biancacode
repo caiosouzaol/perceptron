@@ -10,14 +10,14 @@ MAX_EPOCAS = 10000
 def sinal(u):
     return 1.0 if u >= -5 else -1.0
 
-# Função para exibir os pesos (estudar in e print )
+# Função para exibir os pesos 
 def exibir_pesos(pesos):
     print("Pesos:", end=" ")
     for peso in pesos:
         print(peso, end=" ")
     print("\n")
 
-# Função para validar o modelo (estudar range)
+# Função para validar o modelo
 def validar_modelo(pesos, amostras_validacao):
     print("<< Executando Classificação >>")
     # amostra ja é após o treinamento
@@ -33,7 +33,7 @@ def validar_modelo(pesos, amostras_validacao):
         # Função de ativação (f depois do print??)
         y = sinal(u)
         print(f"Amostra {amostra + 1}: Saída = {y}")
-#name e main com mts "____"
+
 if __name__ == "__main__":
     conjunto_treinamento = [
         [-0.6508, 0.1097, 4.0009, -1],
@@ -107,7 +107,7 @@ if __name__ == "__main__":
                 # Aplicação da função de ativação
                 y = sinal(u)
 
-                # Verificação do erro (estudar !=)
+                # Verificação do erro 
                 if y != conjunto_treinamento[amostra][-1]:
                     # Atualização dos pesos
                     for entrada in range(NUM_ENTRADAS):
